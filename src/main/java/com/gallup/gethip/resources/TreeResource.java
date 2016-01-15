@@ -2,50 +2,44 @@ package com.gallup.gethip.resources;
 
 import java.sql.SQLException;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 import com.gallup.gethip.DataSourceManager;
-import com.gallup.gethip.model.User;
+import com.gallup.gethip.model.Tree;
 import com.j256.ormlite.dao.Dao;
 
-//The Java class will be hosted at the URI path "/user/{id}"
-@Path("/user/{id}")
-public class UserResource {
+public class TreeResource {
 	// The Java method will process HTTP GET requests
     @GET 
     // The Java method will produce content identified by the MIME Media
     // type "application/json"
     @Produces("application/json")
-    public User getIt(@QueryParam("id") String id) {
-    	User u = null;
+    public Tree getIt(@QueryParam("id") String id) {
+    	Tree t = null;
     	try {
-			u = getDao().queryForId(id);
-			if(u == null){
+			t = getDao().queryForId(id);
+			if(t == null){
 				throw new NullPointerException("User does not exist");
 			}else{
-				return u;
+				return t;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 			// throw error message
 		}
-    	return u;
+    	return t;
         
     }
     
     @DELETE
     @Produces("text/plain")
-    public String deleteUser(@QueryParam("id") String id){
+    public String deleteTree(@QueryParam("id") String id){
     	try {
 			int num = getDao().deleteById(id);
 			if(num == 1){
@@ -62,13 +56,13 @@ public class UserResource {
     @POST
     @Produces("application/json")
     @Consumes("application/json")
-    public User createUser(User u){
+    public Tree createTree(Tree t){
     	try {
-			User userPrime = getDao().createIfNotExists(u);
-			if(userPrime == null){
-				// handle error
+			Tree treePrime = getDao().createIfNotExists(t);
+			if(treePrime == null){
+				throw new NullPointerException();
 			}else{
-				return userPrime;
+				return treePrime;
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -80,23 +74,23 @@ public class UserResource {
     @PUT
     @Produces("text/plain")
     @Consumes("application/json")
-    public String updateUser(User u){
+    public String updateTree(Tree t){
     	try {
-			int num = getDao().update(u);
+			int num = getDao().update(t);
 			if(num == 1){
-				return "Update successful for user " + u.getID();
+				return "Update successful for user " + t.getID();
 			}else{
-				return "Could not update " + u.getID();
+				return "Could not update " + t.getID();
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return "Error updating " + u.getID();
+			return "Error updating " + t.getID();
 		}
     }
     
-    private Dao<User, String> getDao(){
-    	Dao<User, String> dao = DataSourceManager.getInstance().getDao(User.class);
+    private Dao<Tree, String> getDao(){
+    	Dao<Tree, String> dao = DataSourceManager.getInstance().getDao(Tree.class);
     	return dao;
     }
 }

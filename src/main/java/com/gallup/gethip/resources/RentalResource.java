@@ -1,7 +1,6 @@
-
 package com.gallup.gethip.resources;
-
 import java.sql.SQLException;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,42 +14,40 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 import com.gallup.gethip.DataSourceManager;
-import com.gallup.gethip.model.Employee;
+import com.gallup.gethip.model.Rental;
+import com.gallup.gethip.model.User;
 import com.j256.ormlite.dao.Dao;
 
-// The Java class will be hosted at the URI path "/employee"
-@Path("/employee")
-public class EmployeeResource {
-
-    // TODO: update the class to suit your needs
-    
-    // The Java method will process HTTP GET requests
+//The Java class will be hosted at the URI path "/rental/{id}"
+@Path("/rental/{id}")
+public class RentalResource {
+	// The Java method will process HTTP GET requests
     @GET 
     // The Java method will produce content identified by the MIME Media
     // type "application/json"
     @Produces("application/json")
-    public Employee getIt(@QueryParam("empno") String empno) {
-    	Employee emp = null;
+    public Rental getIt(@QueryParam("id") String id) {
+    	Rental r = null;
     	try {
-			emp = getDao().queryForId(empno);
-			if(emp == null){
-				throw new NullPointerException("Employee does not exist");
+			r = getDao().queryForId(id);
+			if(r == null){
+				throw new NullPointerException("User does not exist");
 			}else{
-				return emp;
+				return r;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 			// throw error message
 		}
-    	return emp;
+    	return r;
         
     }
     
     @DELETE
     @Produces("text/plain")
-    public String deleteEmployee(@QueryParam("empno") String empno){
+    public String deleteRental(@QueryParam("id") String id){
     	try {
-			int num = getDao().deleteById(empno);
+			int num = getDao().deleteById(id);
 			if(num == 1){
 				return "Delete successful";
 			}else{
@@ -65,13 +62,13 @@ public class EmployeeResource {
     @POST
     @Produces("application/json")
     @Consumes("application/json")
-    public Employee createEmployee(Employee emp){
+    public Rental createRental(Rental r){
     	try {
-			Employee empPrime = getDao().createIfNotExists(emp);
-			if(empPrime == null){
-				// handle error
+			Rental rentalPrime = getDao().createIfNotExists(r);
+			if(rentalPrime == null){
+				throw new NullPointerException();
 			}else{
-				return empPrime;
+				return rentalPrime;
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -83,23 +80,23 @@ public class EmployeeResource {
     @PUT
     @Produces("text/plain")
     @Consumes("application/json")
-    public String updateEmployee(Employee emp){
+    public String updateRental(Rental r){
     	try {
-			int num = getDao().update(emp);
+			int num = getDao().update(r);
 			if(num == 1){
-				return "Update successful for employee " + emp.getEmpNo();
+				return "Update successful for user " + r.getID();
 			}else{
-				return "Could not update " + emp.getEmpNo();
+				return "Could not update " + r.getID();
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return "Error updating " + emp.getEmpNo();
+			return "Error updating " + r.getID();
 		}
     }
     
-    private Dao<Employee, String> getDao(){
-    	Dao<Employee, String> dao = DataSourceManager.getInstance().getDao(Employee.class);
+    private Dao<Rental, String> getDao(){
+    	Dao<Rental, String> dao = DataSourceManager.getInstance().getDao(Rental.class);
     	return dao;
     }
 }

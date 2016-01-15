@@ -7,7 +7,7 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @XmlRootElement
-@DatabaseTable(tableName="users")
+@DatabaseTable(tableName="user")
 public class User {
 	
 	@DatabaseField(generatedId = true, columnName = "id")
@@ -16,13 +16,16 @@ public class User {
 	
 	@DatabaseField(columnName = "email")
 	private String email;
-	
-	@DatabaseField(columnName = "password")
-	private String password;
-	
+
 	
 	
 	public User(){
+		
+	}
+	
+	public User(int i, String e){
+		this.id = i;
+		this.email = e;
 		
 	}
 
@@ -42,9 +45,6 @@ public class User {
 		this.email = e;
 	}
 	
-	public void setPassword(String p){
-		this.password = p;
-	}
 	
 }
 

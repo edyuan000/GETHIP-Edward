@@ -37,7 +37,7 @@ public class UserResource {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			// throw error message
+			System.out.println("SQL Exception user doesn't exist");
 		}
     	return u;
         
@@ -66,7 +66,7 @@ public class UserResource {
     	try {
 			User userPrime = getDao().createIfNotExists(u);
 			if(userPrime == null){
-				// handle error
+				throw new NullPointerException("User does not exist");
 			}else{
 				return userPrime;
 			}

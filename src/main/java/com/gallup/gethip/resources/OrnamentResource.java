@@ -1,50 +1,45 @@
 package com.gallup.gethip.resources;
-import java.sql.SQLException;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.sql.SQLException;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 import com.gallup.gethip.DataSourceManager;
-import com.gallup.gethip.model.Rental;
+import com.gallup.gethip.model.Ornament;
 import com.j256.ormlite.dao.Dao;
 
-//The Java class will be hosted at the URI path "/rental/{id}"
-@Path("/rental/{id}")
-public class RentalResource {
+public class OrnamentResource {
 	// The Java method will process HTTP GET requests
     @GET 
     // The Java method will produce content identified by the MIME Media
     // type "application/json"
     @Produces("application/json")
-    public Rental getIt(@QueryParam("idRental") String id) {
-    	Rental r = null;
+    public Ornament getIt(@QueryParam("idOrnament") String id) {
+    	Ornament o = null;
     	try {
-			r = getDao().queryForId(id);
-			if(r == null){
-				throw new NullPointerException("Rental does not exist");
+			o = getDao().queryForId(id);
+			if(o == null){
+				throw new NullPointerException("Ornament does not exist");
 			}else{
-				return r;
+				return o;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("SQL Exception, rental doesn't exist");
+			System.out.println("Ornament doesn't exist, SQL exception");
 		}
-    	return r;
+    	return o;
         
     }
     
     @DELETE
     @Produces("text/plain")
-    public String deleteRental(@QueryParam("id") String id){
+    public String deleteOrnament(@QueryParam("idOrnament") String id){
     	try {
 			int num = getDao().deleteById(id);
 			if(num == 1){
@@ -61,13 +56,13 @@ public class RentalResource {
     @POST
     @Produces("application/json")
     @Consumes("application/json")
-    public Rental createRental(Rental r){
+    public Ornament createTree(Ornament o){
     	try {
-			Rental rentalPrime = getDao().createIfNotExists(r);
-			if(rentalPrime == null){
+			Ornament oPrime = getDao().createIfNotExists(o);
+			if(oPrime == null){
 				throw new NullPointerException();
 			}else{
-				return rentalPrime;
+				return oPrime;
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -79,23 +74,23 @@ public class RentalResource {
     @PUT
     @Produces("text/plain")
     @Consumes("application/json")
-    public String updateRental(Rental r){
+    public String updateOrnament(Ornament o){
     	try {
-			int num = getDao().update(r);
+			int num = getDao().update(o);
 			if(num == 1){
-				return "Update successful for user " + r.getID();
+				return "Update successful for user " + o.getID();
 			}else{
-				return "Could not update " + r.getID();
+				return "Could not update " + o.getID();
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return "Error updating " + r.getID();
+			return "Error updating " + o.getID();
 		}
     }
     
-    private Dao<Rental, String> getDao(){
-    	Dao<Rental, String> dao = DataSourceManager.getInstance().getDao(Rental.class);
+    private Dao<Ornament, String> getDao(){
+    	Dao<Ornament, String> dao = DataSourceManager.getInstance().getDao(Ornament.class);
     	return dao;
     }
 }

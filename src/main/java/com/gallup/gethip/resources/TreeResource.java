@@ -20,18 +20,18 @@ public class TreeResource {
     // The Java method will produce content identified by the MIME Media
     // type "application/json"
     @Produces("application/json")
-    public Tree getIt(@QueryParam("id") String id) {
+    public Tree getIt(@QueryParam("idTree") String id) {
     	Tree t = null;
     	try {
 			t = getDao().queryForId(id);
 			if(t == null){
-				throw new NullPointerException("User does not exist");
+				throw new NullPointerException("Tree does not exist");
 			}else{
 				return t;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			// throw error message
+			System.out.println("SQL Exception tree doesn't exist");
 		}
     	return t;
         

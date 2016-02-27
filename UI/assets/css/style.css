@@ -18,7 +18,7 @@ li a {
 	text-decoration: none;
 }
 li a:hover {
-	background-color: green;
+	background-color: #1B9AAA;
 	
 }
 #cart {
@@ -76,15 +76,18 @@ h1 {
 #counter1{
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 35px;
+	color: #1B9AAA;
 }
 #counter2{
 	font-family: Helvetica-light, Tahoma, san-serif;
-	font-size: 35px;	
+	font-size: 35px;
+    color: #1B9AAA;	
 	
 }
 #counter3{
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 35px;
+	color: #1B9AAA;
 }
 #halloween{
 	float:left;
@@ -103,6 +106,12 @@ h1 {
 	padding-left:120px;
 }
 #days{
+	padding-left: 250px;
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 55px;
+	
+}
+#notdays{
 	text-align: center;
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 45px;
@@ -111,13 +120,16 @@ body{
 	background-color: white;
 }
 #blurb{
-	padding-left: 350px;
-	font-size: 20px
+	padding-left: 300px;
+	font-size: 20px;
+	padding-right: 300px;
+	
 }
 #breakers{
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 40px;
 	padding-left: 200px;
+	color: #1B9AAA;
 }
 #form{
 	padding-left: 200px;
@@ -128,9 +140,9 @@ body{
 	
 }
 footer{
-	background-color: #D1D0D0;
+	background-color: #DDDBCB;
 }
-#footer{
-	background-color: #D1D0D0;
-	float: bottom;
+
+#colorblock{
+	background-color: #1B9AAA;
 }

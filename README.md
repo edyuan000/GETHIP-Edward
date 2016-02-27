@@ -1,37 +1,75 @@
-## Preparing for the project
+#Holiday Tree and Decoration Rental
 
-Make sure you have the following installed:
-- Eclipse (with Maven and web tools SDK packages)
-- MySQL Server (latest version: http://dev.mysql.com/downloads/mysql/)
-- MySQL Workbench (latest version: http://dev.mysql.com/downloads/workbench/)
-- Git Bash
-- Firefox or Chrome
+---
 
-Packages in Eclipse can be installed by going to Help > Install New Software...
+##Our Team
 
-Use the URL http://download.eclipse.org/technology/m2e/releases to get the Maven package.
-Use the URL http://download.eclipse.org/webtools/repository/mars to get the web tools SDK (latest version)
+We communicate through the GroupMe app.
 
-## Setting up the environment
+- Hannah May: Team Lead
 
-1. Clone this repository onto your machine. This project is a skeleton that providers boilerplate code for a server, database connection and an ORM manager
-2. Import the project into eclipse as a Maven project (File > Import.. and open the 'Maven' folder. Select 'Existing Maven Projects to get started')
-3. Start the MySQL Server
-4. Connect Workbench to your running MySQL instance (https://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-create-connection.html)
-5. Use the Workbench to create a new schema in your instance and create tables in that schema
+- Eddie Yuan: API Management
 
-## Project Skeleton Notes
+- Ed Torres: API Management
 
-- The Main.java code will open a db connection, build any DAOs, and start the server. YOU must supply connection information (in createDatabaseConnection) and your DAO resource classes (in buildDaos)
-- DataSourceManager.java is a Singleton class (static class that has one instance that all other classes access). It holds a map of each DAO that you create. Refer to EmployeeResource.java for a usage example
-- Model classes should go in the com.gallup.gethip.model package
-- Resource classes should go in the com.gallup.gethip.resources package
-- The pom.xml file defines our project library dependancies. We are using Grizzly2 for our server, Jersey as our resource, ORMlite as our DB Connection and mapping tool and a MySQL connector for JDBC
+- Mary Claire Rodgers: Web Design
 
-It is recommended that you start by creating your database and tables. Then it is a good idea to create the Model classes that will represent your data. From there you can define your endpoints and build your resource classes. Please read the documentation as well! it is very helpful:
+- Thomas Gerot: AJAX Management
 
-ORMlite: http://ormlite.com/javadoc/ormlite-core/doc-files/ormlite.html
-Jersey: https://jersey.java.net/documentation/latest/user-guide.html
-MySQL: http://dev.mysql.com/doc/workbench/en/
+---
 
-If you have any questions on this please email the instructors.
+##Our Project
+
+We seek to create an online service that allows customers to rent out holiday decorations instead of wasting their own space storing the decorations for another year.
+
+###API
+
+The API (Application Programming Interface) root directory of this project's repository contains the Java backend/server-side portion of the project. The directory currently contains an Eclipse Maven project serving the API in a JSON (JavaScript Object Notation) for a JavaScript application to reach from the client-side.
+
+---
+
+###DB
+
+The DB (Database) root directory of this project's repository will contain an exported CSV file (`.csv`) and/or Excel Spreadsheet (`.xls`) depicting the structure of our database. Our database will be hosted on James Getrost's own server, and managed through the phpmyadmin platform, and possibly MySQL Workbench in the future. Currently our database is titled `rental` and contains two tables named `decorations` and `cart`.
+
+####Decorations
+
+The decorations table will contain a full index of all the offered decorations including the following columns:
+
+| Column Name | Data Type | Primary Key | Not Null | Binary | Zero Fill | Auto Increment | Default Value |
+|:-----------:|:-----------:|:-----------:|:--------:|:------:|:---------:|:--------------:|:-------------:|
+| productid | INT | TRUE | TRUE | FALSE | FALSE | TRUE | NONE |
+| name | VARCHAR(50) | FLASE | FALSE | FALSE | FALSE | FALSE | NULL |
+| price | DOUBLE | FALSE | TRUE | FALSE | FALSE | FALSE | 0.00 |
+| holiday | VARCHAR(20) | FALSE | FALSE | FALSE | FALSE | FALSE | NULL |
+
+**productid**: An auto-generated, auto-incrementing, identification number specific to each product (Ex. `142`)
+
+**name**: The name of the specific product (Ex. `Party Cooler`)
+
+**price**: A dollar price value for the product (Ex. `4.25`)
+
+**holiday**: The holiday associated with the decoration (Ex. `Christmas`)
+
+####Cart
+
+The cart table will contain a listing of all items currently in the cart, including the following columns:
+
+| Column Name | Data Type | Primary Key | Not Null | Binary | Zero Fill | Auto Increment | Default Value |
+|:-----------:|:---------:|:-----------:|:--------:|:------:|:---------:|:--------------:|:-------------:|
+| productid | INT | FALSE | TRUE | FALSE | FALSE | FALSE | NONE |
+| cartid | INT | TRUE | TRUE | FALSE | FALSE | TRUE | NONE |
+| dateadded | DATE | FALSE | FALSE | FALSE | FALSE | FALSE | NULL |
+
+**productid**: The productid number [found in the decorations table] identifying the product in the cart (Ex. `72`)
+
+**cartid**: The auto-generated, primary integer used to reference items in the cart (Ex. `12`)
+
+**dateadded**: The date [in MySQL format] when the client added the product to their cart (Ex. `2016-02-19`)
+
+---
+
+###UI
+The UI (User Interface) root directory of this project's repository will contain the web files (`.html`, `.css`, and `.js`) that will be served to the client's browser for the use of navigation through the web service. In the future, the website will allow users to filter and browse the list of decorations offered, add them to their cart, and purchase them.
+
+---

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="christmastreerental.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <script>
     $("#slideshow > div:gt(0)").hide();
 
@@ -15,7 +15,7 @@
     },  3000);
 
     </script>
-    <title></title>
+    <title>Home</title>
 </head>
 <body>
     <ul>
@@ -45,25 +45,6 @@
     width="100%"> <img alt="" height="350" src=
     "http://spirit.scene7.com/is/image/Spirit/Cat_Decor_Hdr?$fullsize$" width=
     "100%"></div>
-    <script>
-    (function(){
-        var imgLen = document.getElementById('imgGallary');
-        var images = imgLen.getElementsByTagName('img');
-        var counter = 1;
-
-        if(counter <= images.length){
-            setInterval(function(){
-                images[0].src = images[counter].src;
-                console.log(images[counter].src);
-                counter++;
-
-                if(counter === images.length){
-                    counter = 1;
-                }
-            },4000);
-        }
-    })();
-    </script>
     <p id="days">Days until</p>
     <div id="counters">
         <div id="christmas">
@@ -85,5 +66,6 @@
             width="301"></iframe>
         </div>
     </div>
+	<script type="text/javascript" src="countdown.js" defer></script>
 </body>
 </html>

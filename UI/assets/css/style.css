@@ -1,0 +1,112 @@
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: black;
+font-family: Helvetica-light, Tahoma, san-serif;
+font-size: 22px;
+}
+li {
+	float: left;
+}
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 60px;
+	text-decoration: none;
+}
+li a:hover {
+	background-color: green;
+	
+}
+#cart {
+	float: right;
+	text-align: right;
+	padding-left:100px;
+}
+#cart2{
+	float:right;
+	padding-left:50px;
+}
+h1 {
+	text-align: center;
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 72px;
+}
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 100px; 
+    left: 100px; 
+    right: 100px; 
+    bottom: 100px; 
+}
+
+
+#addtocart {
+	float: right;
+	padding-top: 20px;
+}
+.container{
+            position:relative;
+            width:100%;
+            height:350px;
+            border-radius:5px;
+            border:5px solid white;
+            overflow:hidden;
+			
+        }
+#tree{
+	float: left;
+}
+#ds{
+			float: left;
+			padding-top: 20px;
+		}
+#counter1{
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 35px;
+}
+#counter2{
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 35px;	
+	
+}
+#counter3{
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 35px;
+}
+#halloween{
+	float:left;
+	padding-left: 30px;
+
+}
+#valentine{
+	float:left;
+	padding-left: 30px;
+}
+#christmas{
+	float:left;
+	padding-left: 30px;
+}
+#counters{
+	padding-left:120px;
+}
+#days{
+	text-align: center;
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 45px;
+}
+body{
+	background-color: #B8B7B7;
+}

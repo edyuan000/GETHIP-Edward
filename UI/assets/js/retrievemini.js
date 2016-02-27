@@ -1,0 +1,1 @@
+function retrieve(e,t){var n,a,o;n=new XMLHttpRequest,n.onreadystatechange=function(){if(4==n.readyState&&200==n.status)for(a=JSON.parse(n.responseText),o=0;o<=a.products.length-1;o++)document.getElementById(a.products[o].holiday.replace(" ","_").toLowerCase()).value+=a.products[o].name+"\n\n"},n.open(e,t,!0),n.send()}

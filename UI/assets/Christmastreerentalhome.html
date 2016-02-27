@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="christmastreerental.css">
+<script>
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+
+</script>
+</head>
+<body>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Christmas</a></li>
+<li><a href="#">Valentine's Day</a></li>
+<li><a href="#">Halloween</a></li>
+<li id="cart"><a href="#">Cart <img id="cart2" src="shoppingcart1.PNG" width= "25px" height= "25px"> </a></li>
+</ul>
+<div id="imgGallary" class="container">
+    <img src="http://happyholidays2016.com/wp-content/uploads/2015/11/Christmas-Outside-Home-Decorations-05.jpg" alt="" width="100%" height="350" />
+    <img src="http://partycity.scene7.com/is/image/PartyCity/F550190F_02_full?scl=1" alt="" width="100%" height="2000" />
+    <img src="http://westbocaleaders.com/wp-content/uploads/2013/12/ChristmasBulbs.jpg" alt="" width="100%" height="350" />
+    <img src="http://spirit.scene7.com/is/image/Spirit/Cat_Decor_Hdr?$fullsize$" alt="" width="100%" height="350" />
+</div>
+<script>
+(function(){
+        var imgLen = document.getElementById('imgGallary');
+        var images = imgLen.getElementsByTagName('img');
+        var counter = 1;
+
+        if(counter <= images.length){
+            setInterval(function(){
+                images[0].src = images[counter].src;
+                console.log(images[counter].src);
+                counter++;
+
+                if(counter === images.length){
+                    counter = 1;
+                }
+            },4000);
+        }
+})();
+</script>
+
+<p id="days">Days until</p>
+<div id="counters">
+<div id="christmas">
+<h3 id="counter1">Christmas</h3>
+<iframe src="http://free.timeanddate.com/countdown/i52rph93/n155/cf12/cm0/cu4/ct5/cs0/ca0/co0/cr0/ss0/cacfff/cpc000/pc828181/tcfff/fn2/fs100/szw700/szh295/iso2016-12-25T00:00:00/pa5" allowTransparency="true" frameborder="0" width="301" height="69"></iframe>
+</div>
+<div id="halloween">
+<h3 id="counter2">Halloween</h3>
+<iframe src="http://free.timeanddate.com/countdown/i52rph93/n155/cf12/cm0/cu4/ct5/cs0/ca0/co0/cr0/ss0/cacfff/cpc000/pc828181/tcfff/fn2/fs100/szw700/szh295/iso2016-10-31T00:00:00/pa5" allowTransparency="true" frameborder="0" width="301" height="69"></iframe>
+</div>
+<div id="valentine">
+<h3 id="counter3">Valentine's Day</h3>
+<iframe src="http://free.timeanddate.com/countdown/i52rph93/n155/cf12/cm0/cu4/ct5/cs0/ca0/co0/cr0/ss0/cacfff/cpc000/pc828181/tcfff/fn2/fs100/szw700/szh295/iso2017-02-14T00:00:00/pa5" allowTransparency="true" frameborder="0" width="301" height="69"></iframe>
+</div>
+</div>
+</body>
+</html>

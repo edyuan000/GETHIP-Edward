@@ -1,0 +1,93 @@
+{
+	"products": [{
+		"id": 0,
+		"name": "Party Hats",
+		"price": 1.50,
+		"holiday": "New Years"
+	}, {
+		"id": 0,
+		"name": "Confetti Cannon",
+		"price": 5.00,
+		"holiday": "New Years"
+	}, {
+		"id": 3,
+		"name": "Party Cooler",
+		"price": 3.96,
+		"holiday": "New Years"
+	}, {
+		"id": 4,
+		"name": "Heart Streamers",
+		"price": 2.15,
+		"holiday": "Valentines Day"
+	}, {
+		"id": 5,
+		"name": "I <3 You Poster",
+		"price": 3.00,
+		"holiday": "Valentines Day"
+	}, {
+		"id": 6,
+		"name": "Romantic Lights",
+		"price": 2.62,
+		"holiday": "Valentines Day"
+	}, {
+		"id": 7,
+		"name": "250 Easter Egg Pack",
+		"price": 3.45,
+		"holiday": "Easter"
+	}, {
+		"id": 8,
+		"name": "Easter Egg Basket",
+		"price": 1.05,
+		"holiday": "Easter"
+	}, {
+		"id": 9,
+		"name": "Bunny Ears",
+		"price": 0.97,
+		"holiday": "Easter"
+	}, {
+		"id": 10,
+		"name": "American Flags",
+		"price": 3.75,
+		"holiday": "Fourth of July"
+	}, {
+		"id": 11,
+		"name": "Uncle Sam Hats",
+		"price": 2.40,
+		"holiday": "Fourth of July"
+	}, {
+		"id": 12,
+		"name": "Red, White, and Blue Lights",
+		"price": 4.86,
+		"holiday": "Fourth of July"
+	}, {
+		"id": 13,
+		"name": "20 Spooky Spiders",
+		"price": 3.41,
+		"holiday": "Halloween"
+	}, {
+		"id": 14,
+		"name": "Trick or Treat Bucket",
+		"price": 0.76,
+		"holiday": "Halloween"
+	}, {
+		"id": 15,
+		"name": "Monster Mask",
+		"price": 0.55,
+		"holiday": "Halloween"
+	}, {
+		"id": 16,
+		"name": "12ft Fake Christmas Tree",
+		"price": 7.98,
+		"holiday": "Christmas"
+	}, {
+		"id": 17,
+		"name": "Christmas Lights",
+		"price": 5.37,
+		"holiday": "Christmas"
+	}, {
+		"id": 18,
+		"name": "Christmas Tree Skirt",
+		"price": 4.77,
+		"holiday": "Christmas"
+	}]
+}

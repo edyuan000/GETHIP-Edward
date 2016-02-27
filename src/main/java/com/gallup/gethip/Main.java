@@ -18,7 +18,7 @@ public class Main {
 		try {
 			connectionSource = new JdbcConnectionSource(databaseUrl);
 			((JdbcConnectionSource)connectionSource).setUsername("rental");
-			((JdbcConnectionSource)connectionSource).setPassword("get-hip");
+			((JdbcConnectionSource)connectionSource).setPassword("gethip");
 			DataSourceManager.setConnectionSource(connectionSource);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -49,6 +49,7 @@ public class Main {
     public static final URI BASE_URI = getBaseURI();
     protected static HttpServer startServer() throws IOException {
         ResourceConfig resourceConfig = new PackagesResourceConfig("com.gallup.gethip.resources");
+        resourceConfig.getContainerResponseFilters().add("com.gallup.gethip.CORSResponseFilter");
         System.out.println("Starting grizzly2...");
         return GrizzlyServerFactory.createHttpServer(BASE_URI, resourceConfig);
     }

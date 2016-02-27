@@ -1,64 +1,188 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="2.062" errors="0" skipped="0" tests="2" name="com.gallup.gethip.MainTest">
+<testsuite tests="2" failures="0" name="com.gallup.gethip.MainTest" time="1.929" errors="2" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib"/>
-    <property name="java.vm.version" value="24.80-b11"/>
-    <property name="gopherProxySet" value="false"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre8\bin"/>
+    <property name="java.vm.version" value="25.73-b02"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/zach_merrill/Documents/workspace/jersey_ormlite_example"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=":"/>
+    <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/zach_merrill/Documents/workspace/jersey_ormlite_example"/>
-    <property name="java.runtime.version" value="1.7.0_80-b15"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/endorsed"/>
-    <property name="os.arch" value="x86_64"/>
-    <property name="java.io.tmpdir" value="/var/folders/gc/q1g1v8vn3cd5287x5bv44pqdxkw5w7/T/"/>
+    <property name="user.dir" value="C:\Users\avguest\GETHIP-Edward"/>
+    <property name="java.runtime.version" value="1.8.0_73-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre8\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\avguest\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.3.3/libexec/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/zach_merrill/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Users\avguest\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3007352504175210245.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre8\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre8/bin/server;C:/Program Files/Java/jre8/bin;C:/Program Files/Java/jre8/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="51.0"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.10.5"/>
-    <property name="user.home" value="/Users/zach_merrill"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\avguest"/>
     <property name="user.timezone" value="America/Chicago"/>
-    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
-    <property name="java.specification.version" value="1.7"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="zach_merrill"/>
-    <property name="java.class.path" value="/usr/local/Cellar/maven/3.3.3/libexec/boot/plexus-classworlds-2.5.2.jar"/>
-    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="avguest"/>
+    <property name="java.class.path" value="/C:/Eclipse/configuration/org.eclipse.osgi/bundles/261/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.home" value="C:\Program Files\Java\jre8"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
-    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.7.0_80"/>
-    <property name="java.ext.dirs" value="/Users/zach_merrill/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/classes"/>
+    <property name="java.version" value="1.8.0_73"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre8\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre8\lib\resources.jar;C:\Program Files\Java\jre8\lib\rt.jar;C:\Program Files\Java\jre8\lib\sunrsasign.jar;C:\Program Files\Java\jre8\lib\jsse.jar;C:\Program Files\Java\jre8\lib\jce.jar;C:\Program Files\Java\jre8\lib\charsets.jar;C:\Program Files\Java\jre8\lib\jfr.jar;C:\Program Files\Java\jre8\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/usr/local/Cellar/maven/3.3.3/libexec"/>
-    <property name="file.separator" value="/"/>
+    <property name="maven.home" value="C:\Users\avguest\GETHIP-Edward\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="maven.bootclasspath" value="/C:/Eclipse/configuration/org.eclipse.osgi/bundles/261/1/.cp/jars/plexus-classworlds-2.4.jar"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="1.737" classname="com.gallup.gethip.MainTest" name="testMyResource"/>
-  <testcase time="0.325" classname="com.gallup.gethip.MainTest" name="testApplicationWadl"/>
+  <testcase classname="com.gallup.gethip.MainTest" name="testApplicationWadl" time="1.606">
+    <error message="Address already in use: bind" type="java.net.BindException">java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:395)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:366)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:357)
+	at org.glassfish.grizzly.http.server.NetworkListener.start(NetworkListener.java:606)
+	at org.glassfish.grizzly.http.server.HttpServer.start(HttpServer.java:260)
+	at com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory.createHttpServer(GrizzlyServerFactory.java:329)
+	at com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory.createHttpServer(GrizzlyServerFactory.java:346)
+	at com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory.createHttpServer(GrizzlyServerFactory.java:245)
+	at com.gallup.gethip.Main.startServer(Main.java:54)
+	at com.gallup.gethip.MainTest.setUp(MainTest.java:27)
+	at junit.framework.TestCase.runBare(TestCase.java:132)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+    <system-out>Starting grizzly2...
+</system-out>
+    <system-err>Feb 27, 2016 11:44:31 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  com.gallup.gethip.resources
+Feb 27, 2016 11:44:31 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class com.gallup.gethip.resources.DecorationResource
+  class com.gallup.gethip.resources.CartResource
+Feb 27, 2016 11:44:31 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Feb 27, 2016 11:44:31 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version &apos;Jersey: 1.19 02/11/2015 03:25 AM&apos;
+Feb 27, 2016 11:44:31 AM com.sun.jersey.core.spi.component.ProviderServices getInstances
+SEVERE: The class com.gallup.gethip.CORSResponseFilter is not assignable to the class com.sun.jersey.spi.container.ContainerResponseFilter. This class is ignored.
+Feb 27, 2016 11:44:32 AM com.sun.jersey.spi.inject.Errors processErrorMessages
+WARNING: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.CartResource.getId(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.CartResource.getAddDate(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.DecorationResource.getProductName(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.DecorationResource.getProductId(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.DecorationResource.getHoliday(java.lang.String), should not consume any entity.
+</system-err>
+  </testcase>
+  <testcase classname="com.gallup.gethip.MainTest" name="testMyResource" time="0.267">
+    <error message="Address already in use: bind" type="java.net.BindException">java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:395)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:366)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:357)
+	at org.glassfish.grizzly.http.server.NetworkListener.start(NetworkListener.java:606)
+	at org.glassfish.grizzly.http.server.HttpServer.start(HttpServer.java:260)
+	at com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory.createHttpServer(GrizzlyServerFactory.java:329)
+	at com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory.createHttpServer(GrizzlyServerFactory.java:346)
+	at com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory.createHttpServer(GrizzlyServerFactory.java:245)
+	at com.gallup.gethip.Main.startServer(Main.java:54)
+	at com.gallup.gethip.MainTest.setUp(MainTest.java:27)
+	at junit.framework.TestCase.runBare(TestCase.java:132)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+    <system-out>Starting grizzly2...
+</system-out>
+    <system-err>Feb 27, 2016 11:44:33 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  com.gallup.gethip.resources
+Feb 27, 2016 11:44:33 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class com.gallup.gethip.resources.DecorationResource
+  class com.gallup.gethip.resources.CartResource
+Feb 27, 2016 11:44:33 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Feb 27, 2016 11:44:33 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version &apos;Jersey: 1.19 02/11/2015 03:25 AM&apos;
+Feb 27, 2016 11:44:33 AM com.sun.jersey.core.spi.component.ProviderServices getInstances
+SEVERE: The class com.gallup.gethip.CORSResponseFilter is not assignable to the class com.sun.jersey.spi.container.ContainerResponseFilter. This class is ignored.
+Feb 27, 2016 11:44:33 AM com.sun.jersey.spi.inject.Errors processErrorMessages
+WARNING: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.CartResource.getId(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.CartResource.getAddDate(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.DecorationResource.getProductName(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.DecorationResource.getProductId(java.lang.String), should not consume any entity.
+  WARNING: A HTTP GET method, public java.lang.String com.gallup.gethip.resources.DecorationResource.getHoliday(java.lang.String), should not consume any entity.
+</system-err>
+  </testcase>
 </testsuite>

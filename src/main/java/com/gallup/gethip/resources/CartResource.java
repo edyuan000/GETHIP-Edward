@@ -1,5 +1,8 @@
 package com.gallup.gethip.resources;
+
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -12,109 +15,106 @@ import javax.ws.rs.Produces;
 
 import com.gallup.gethip.DataSourceManager;
 import com.gallup.gethip.model.Cart;
-import com.gallup.gethip.model.Decoration;
-import com.gallup.gethip.resources.CartResource;
 import com.j256.ormlite.dao.Dao;
+
 @Path("/api/cart")
 public class CartResource {
 	@GET
 	@Produces("application/json")
-	public String getList() {
-		String output;
-		output = "";
+	public List<Cart> getList() {
 		try {
-			DatabaseResource connect = new DatabaseResource();	
-			output = connect.getData("SELECT * FROM cart;");
-		} catch (Exception ex) {
-			System.out.println("Error retrieving all from cart: " + ex);
+			return getDao().queryForAll();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return Collections.emptyList();
+			// TODO Auto-generated catch block
+
 		}
-		return output;
 	}
+
 	@Path("/all")
 	@GET
 	@Produces("application/json")
-	public String getAll() {
-		String output;
-		output = "";
+	public List<Cart> getAll() {
 		try {
-			DatabaseResource connect = new DatabaseResource();	
-			output = connect.getData("SELECT * FROM cart;");
-		} catch (Exception ex) {
-			System.out.println("Error retrieving all from cart: " + ex);
+			return getDao().queryForAll();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return Collections.emptyList();
+			// TODO Auto-generated catch block
+
 		}
-		return output;
 	}
-	@Path("/id/{productId}")
+
+	@Path("/id/{cartid}")
 	@GET
 	@Produces("application/json")
-	public String getId(String id) {
-		String output;
-		output = "";
+	public List<Cart> getId(@PathParam("cartid") String id) {
 		try {
-			DatabaseResource connect = new DatabaseResource();	
-			output = connect.getData("SELECT * FROM cart WHERE productid='" + id + "''");
-		} catch (Exception ex) {
-			System.out.println("Error retrieving item by id: " + ex);
+			return getDao().queryForEq("cartid", id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return Collections.emptyList();
 		}
-		return output;
 	}
+
 	@Path("/dateadded/{addDate}")
 	@GET
 	@Produces("application/json")
-	public String getAddDate(String when) {
-		String output;
-		output = "";
+	public List<Cart> getAddDate(@PathParam("addDate") String date) {
 		try {
-			DatabaseResource connect = new DatabaseResource();	
-			output = connect.getData("SELECT * FROM cart WHERE dateadded='" + when + "';");
-		} catch (Exception ex) {
-			System.out.println("Error retrieving item by date: " + ex);
+			return getDao().queryForEq("DATEADDED", date);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return Collections.emptyList();
 		}
-		return output;
 	}
-	
+
+	@Path("/delete")
 	@DELETE
 	@Produces("text/plain")
-	public String deleteCart(String id){
-    	try {
+	public String deleteCart(String id) {
+		try {
 			int num = getDao().deleteById(id);
-			if(num == 1){
+			if (num == 1) {
 				return "Delete successful";
-			}else{
+			} else {
 				return "Unable to delete";
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return "Error in sql statement";
 		}
-    }
-	
+	}
+
+	@Path("/create")
 	@POST
 	@Produces("application/json")
 	@Consumes("application/json")
-	public Cart createCart(Cart c){
+	public Cart createCart(Cart c) {
 		try {
 			Cart cPrime = getDao().createIfNotExists(c);
-			if(cPrime == null){
+			if (cPrime == null) {
 				throw new NullPointerException();
-			}else{
+			} else {
 				return cPrime;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return  null;
+		return null;
 	}
-	
+
+	@Path("/update/{cartid}")
 	@PUT
 	@Produces("text/plain")
 	@Consumes("application/json")
-	public String updateCart(Cart c){
+	public String updateCart(Cart c) {
 		try {
 			int num = getDao().update(c);
-			if(num == 1){
+			if (num == 1) {
 				return "Update successful for user " + c.getID();
-			}else{
+			} else {
 				return "Could not update " + c.getID();
 			}
 		} catch (SQLException e) {
@@ -122,9 +122,10 @@ public class CartResource {
 			return "Error updating " + c.getID();
 		}
 	}
-	
-	private Dao<Cart, String> getDao(){
-		Dao<Cart, String> dao = DataSourceManager.getInstance().getDao(Cart.class);
+
+	private Dao<Cart, String> getDao() {
+		Dao<Cart, String> dao = DataSourceManager.getInstance().getDao(
+				Cart.class);
 		return dao;
 	}
 }

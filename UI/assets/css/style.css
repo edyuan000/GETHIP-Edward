@@ -1,15 +1,17 @@
 ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: black;
-font-family: Helvetica-light, Tahoma, san-serif;
-font-size: 22px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 22px;
 }
+
 li {
 	float: left;
 }
+
 li a {
 	display: block;
 	color: white;
@@ -17,47 +19,52 @@ li a {
 	padding: 14px 60px;
 	text-decoration: none;
 }
+
 li a:hover {
 	background-color: #1B9AAA;
 	
 }
+
 #cart {
 	float: right;
 	text-align: right;
 	padding-left:100px;
 }
+
 #cart2{
 	float:right;
 	padding-left:50px;
 }
+
 h1 {
 	text-align: center;
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 72px;
 }
+
 #slideshow { 
-    margin: 50px auto; 
-    position: relative; 
-    width: 240px; 
-    height: 240px; 
-    padding: 10px; 
-    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+	margin: 50px auto; 
+	position: relative; 
+	width: 240px; 
+	height: 240px; 
+	padding: 10px; 
+	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
 
 #slideshow > div { 
-    position: absolute; 
-    top: 100px; 
-    left: 100px; 
-    right: 100px; 
-    bottom: 100px; 
+	position: absolute; 
+	top: 100px; 
+	left: 100px; 
+	right: 100px; 
+	bottom: 100px; 
 }
-
 
 #addtocart {
 	float: right;
 	padding-top: 20px;
 }
-.container{
+
+.container {
             position:relative;
             width:100%;
             height:350px;
@@ -65,84 +72,94 @@ h1 {
             border:5px solid white;
             overflow:hidden;
 			
-        }
-#tree{
+}
+
+#tree {
 	float: left;
 }
-#ds{
-			float: left;
-			padding-top: 20px;
-		}
-#counter1{
-	font-family: Helvetica-light, Tahoma, san-serif;
-	font-size: 35px;
-	color: #1B9AAA;
-}
-#counter2{
-	font-family: Helvetica-light, Tahoma, san-serif;
-	font-size: 35px;
-    color: #1B9AAA;	
-	
-}
-#counter3{
-	font-family: Helvetica-light, Tahoma, san-serif;
-	font-size: 35px;
-	color: #1B9AAA;
-}
-#halloween{
-	float:left;
-	padding-left: 30px;
 
+#ds {
+	float: left;
+	padding-top: 20px;
 }
-#valentine{
+#counter1 {
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 35px;
+	color: #1B9AAA;
+}
+
+#counter2 {
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 35px;
+	color: #1B9AAA;	
+}
+
+#counter3 {
+	font-family: Helvetica-light, Tahoma, san-serif;
+	font-size: 35px;
+	color: #1B9AAA;
+}
+
+#halloween {
 	float:left;
 	padding-left: 30px;
 }
-#christmas{
+
+#valentine {
 	float:left;
 	padding-left: 30px;
 }
-#counters{
+
+#christmas {
+	float:left;
+	padding-left: 30px;
+}
+
+#counters {
 	padding-left:120px;
 }
-#days{
+
+#days {
 	padding-left: 250px;
 	font-family: Helvetica-light, Tahoma, san-serif;
-	font-size: 55px;
-	
+	font-size: 55px;	
 }
-#notdays{
+
+#notdays {
 	text-align: center;
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 45px;
 }
-body{
+
+body {
 	background-color: white;
 }
+
 #blurb{
 	padding-left: 300px;
 	font-size: 20px;
-	padding-right: 300px;
-	
+	padding-right: 300px;	
 }
-#breakers{
+
+#breakers {
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 40px;
 	padding-left: 200px;
 	color: #1B9AAA;
 }
-#form{
-	padding-left: 200px;
-	
+
+#form {
+	padding-left: 200px;	
 }
-#purchase{
-	float: right;
-	
+
+#purchase {
+	float: right;	
 }
-footer{
+
+footer {
 	background-color: #DDDBCB;
 }
 
-#colorblock{
+#colorblock {
 	background-color: #1B9AAA;
 }

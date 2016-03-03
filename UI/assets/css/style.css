@@ -13,7 +13,6 @@ ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: black;
-	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 22px;
     height:8%;
 }
@@ -58,6 +57,22 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
+    z-index:2;
+}
+
+#action {
+    height:10%;
+    width:20%;
+    background-color:#1B9AAA;
+    border:4px solid #1B73AA;
+    margin-top:20%;
+    margin-bottom:20%;
+    z-index: 5;
+}
+#action:active {
+    background-color:#1B73AA;
+    border:4px solid #1B9AAA;
 }
 
 .container {
@@ -76,19 +91,16 @@ h1 {
 	padding-top: 20px;
 }
 #counter1 {
-	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 35px;
 	color: #1B9AAA;
 }
 
 #counter2 {
-	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 35px;
 	color: #1B9AAA;	
 }
 
 #counter3 {
-	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 35px;
 	color: #1B9AAA;
 }

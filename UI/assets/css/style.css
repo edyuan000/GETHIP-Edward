@@ -4,6 +4,7 @@ html, body {
 	width:100%;
 	height:100%;
     background-color: #EEF7F8;
+	font-family: Tahoma, san-serif;
 }
 
 ul {
@@ -14,6 +15,7 @@ ul {
 	background-color: black;
 	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 22px;
+    height:8%;
 }
 
 li {
@@ -46,30 +48,16 @@ li a:hover {
 
 h1 {
 	text-align: center;
-	font-family: Helvetica-light, Tahoma, san-serif;
 	font-size: 72px;
 }
 
-#slideshow { 
-	margin: 50px auto; 
-	position: relative; 
-	width: 240px; 
-	height: 240px; 
-	padding: 10px; 
-	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
-}
-
-#slideshow > div { 
-	position: absolute; 
-	top: 100px; 
-	left: 100px; 
-	right: 100px; 
-	bottom: 100px; 
-}
-
-#addtocart {
-	float: right;
-	padding-top: 20px;
+#slides {
+    height:92%;
+    width:100%;
+    background-image: url(../images/slideshow/christmas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .container {

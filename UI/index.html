@@ -2,20 +2,8 @@
 <html>
 <head>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-    </script>
-    <script type="text/javascript">
-    $("#slideshow > div:gt(0)").hide();
-    setInterval(function() { 
-    $('#slideshow > div:first')
-    .fadeOut(1000)
-    .next()
-    .fadeIn(1000)
-    .end()
-    .appendTo('#slideshow');
-    },  3000);
-    </script>
+    <script type="text/javascript" src="assets/js/jQuery/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/slides.js"></script>
     <title></title>
 </head>
 <body>
@@ -36,32 +24,7 @@
             <a href="cart.html">Cart</a>
         </li>
     </ul>
-    <div class="container" id="imgGallary"><img alt="" height="350" src=
-    "http://www.waterdamagedhomes.com/wp-content/uploads/2014/12/o-TACKY-CHRISTMAS-DECORATIONS-facebook.jpg"
-    width="100%"> <img alt="" height="2000" src=
-    "http://partycity.scene7.com/is/image/PartyCity/F550190F_02_full?scl=1"
-    width="100%"> <img alt="" height="350" src=
-    "http://cdn.freshome.com/wp-content/uploads/2009/12/christmas-interior-decor-idea.jpg"
-    width="100%"> <img alt="" height="350" src=
-    "http://spirit.scene7.com/is/image/Spirit/Cat_Decor_Hdr?$fullsize$" width=
-    "100%"></div>
-    <script>
-    (function(){
-        var imgLen = document.getElementById('imgGallary');
-        var images = imgLen.getElementsByTagName('img');
-        var counter = 1;
-        if(counter <= images.length){
-            setInterval(function(){
-                images[0].src = images[counter].src;
-                console.log(images[counter].src);
-                counter++;
-                if(counter === images.length){
-                    counter = 1;
-                }
-            },4000);
-        }
-    })();
-    </script>
+    <div id="slides"></div>
     <p id="days">About us</p>
 	<div id="colorblock"><br></div>
     <p id="blurb">Our mission is to make the holidays relaxing again. We aim to create a conventient and low stress way to decorate your house for the holidays. You simply visit our website shop for what you need and it will appear at your door on the date you request it. We'll even put it up for you. You'll never spend hours shopping for and putting up decorations again. Your basement will never be full of things you use only once a year. Imagine the possibilities. </p>

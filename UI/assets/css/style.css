@@ -15,6 +15,32 @@ html, body {
     background-color: #EEF7F8;
 }
 
+.holidayN {
+    text-align:center;
+    font-size: 3em;
+}
+
+p {
+    text-align: center;
+}
+
+.item {
+    border:3px solid #007de8;
+    text-align:center;
+    width:5em;
+    height:10em;
+    margin-left:2%;
+    margin-bottom:8%;
+}
+
+.itemtable {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2em;
+    width:100%;
+    border-spacing: 0.5em;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -29,6 +55,11 @@ li {
 	float: left;
 }
 
+.holidayLink {
+    text-decoration:none;
+    color: #007de8;
+}
+
 li a {
 	display: block;
 	color: white;
@@ -40,6 +71,15 @@ li a {
 li a:hover {
 	background-color: #1B9AAA;
 	
+}
+
+.browseHead {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.browseText {
+    margin-bottom: 2em;
 }
 
 #cart {

@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <title></title>
-</head>
-<body>
-    <ul>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="Christmas.html">Christmas</a>
-        </li>
-        <li>
-            <a href="Valentine's%20Day.html">Valentine's Day</a>
-        </li>
-        <li>
-            <a href="Halloween.html">Halloween</a>
-        </li>
-        <li id="cart">
-            <a href="cart.html">Cart <img height="25px" id="cart2" src=
-            "shoppingcart1.PNG" width="25px"></a>
-        </li>
-    </ul>
-    <p id="notdays">Cart</p><br>
-	<div id="colorblock"><br></div>
-    <br>
-    <form action="">
-        <p id="breakers">Delivery Information</p><br>
-        First name: <input name="fname" type="text"><br>
+    <head>
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="assets/js/jQuery/jquery-2.2.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/retrieve.js"></script>
+        <title>Cart</title>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="christmas.html">Christmas</a>        
+            </li>
+            <li>
+                <a href="valentines.html">Valentine's Day</a>
+            </li>
+            <li>
+                <a href="halloween.html">Halloween</a>
+            </li>
+            <li id="cart">
+                <a href="cart.html">Cart</a>
+            </li>
+        </ul>
+        <h1 class="browseHead">Browse our Products:</h1>
+        <p class="browseText">
+            Browse through our wide selection of holiday decorations and find the ones that you want most!
+            <br>
+            <br> Scroll through products below, or click on one of the following holidays.
+            <br>
+            <br>
+            <a class="holidayLink" href="#newyearsH">New Years</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="holidayLink" href="#valentinesH">Valentine's Day</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="holidayLink" href="#halloweenH">Halloween</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="holidayLink" href="#christmasH">Christmas</a>
+        </p>
+        <hr>
+        <h2 id="newyearsH" class="holidayN">New Years</h2>
+        <div class="itemcontainer">
+            <table class="itemtable">
+                <tbody class="nyinsert"></tbody>
+            </table>
+        </div>
+        <h2 id="valentinesH" class="holidayN">Valentine's Day</h2>
+        <div class="itemcontainer">
+            <table class="itemtable">
+                <tbody class="vdinsert"></tbody>
+            </table>
+        </div>
+        <h2 id="halloweenH" class="holidayN">Halloween</h2>
+        <div class="itemcontainer">
+            <table class="itemtable">
+                <tbody class="hwinsert"></tbody>
+            </table>
+        </div>
+        <h2 id="christmasH" class="holidayN">Christmas</h2>
+        <div class="itemcontainer">
+            <table class="itemtable">
+                <tbody class="chinsert"></tbody>
+            </table>
+        </div>
         <br>
-        Last name: <input name="lname" type="text"><br>
-        <br>
-        Address: <input name="address" type="text"><br>
-        <br>
-        City: <input name="city" type="text"><br>
-        <br>
-        State: <input name="state" type="text"><br>
-        <br>
-        Zip Code: <input name="zip" type="text"><br>
         <br>
         <br>
-        <p id="breakers">Billing Information</p><br>
-        Credit Card #: <input name="creditcard" type="text"><br>
-        <br>
-        Security Code: <input name="code" type="text"><br>
-        <br>
-        Expiration date: <input name="exp" type="text"><br>
         <br>
         <br>
-        <button id="purchase">Make Purchase</button>
-		<br>
-		<br>
-    </form>
-    <footer>
-        <br>
-        <p>Contact Us</p><br>
-    </footer>
-</body>
+    </body>
 </html>

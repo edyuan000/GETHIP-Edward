@@ -24,6 +24,10 @@ p {
     text-align: center;
 }
 
+.navbar {
+    margin-bottom:1.5em;
+}
+
 .item {
     border:3px solid #007de8;
     text-align:left;

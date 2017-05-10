@@ -1,8 +1,8 @@
-#Holiday Tree and Decoration Rental
+# Holiday Tree and Decoration Rental
 
 ---
 
-##Our Team
+## Our Team
 
 We communicate through the GroupMe app.
 
@@ -18,21 +18,21 @@ We communicate through the GroupMe app.
 
 ---
 
-##Our Project
+## Our Project
 
 We seek to create an online service that allows customers to rent out holiday decorations instead of wasting their own space storing the decorations for another year.
 
-###API
+### API
 
 The API (Application Programming Interface) root directory of this project's repository contains the Java backend/server-side portion of the project. The directory currently contains an Eclipse Maven project serving the API in a JSON (JavaScript Object Notation) for a JavaScript application to reach from the client-side.
 
 ---
 
-###DB
+### DB
 
 The DB (Database) root directory of this project's repository will contain an exported CSV file (`.csv`) and/or Excel Spreadsheet (`.xls`) depicting the structure of our database. Our database will be hosted on James Getrost's own server, and managed through the phpmyadmin platform, and possibly MySQL Workbench in the future. Currently our database is titled `rental` and contains two tables named `decorations` and `cart`.
 
-####Decorations
+#### Decorations
 
 The decorations table will contain a full index of all the offered decorations including the following columns:
 
@@ -51,7 +51,7 @@ The decorations table will contain a full index of all the offered decorations i
 
 **holiday**: The holiday associated with the decoration (Ex. `Christmas`)
 
-####Cart
+#### Cart
 
 The cart table will contain a listing of all items currently in the cart, including the following columns:
 
@@ -69,7 +69,7 @@ The cart table will contain a listing of all items currently in the cart, includ
 
 ---
 
-###UI
+### UI
 The UI (User Interface) root directory of this project's repository will contain the web files (`.html`, `.css`, and `.js`) that will be served to the client's browser for the use of navigation through the web service. In the future, the website will allow users to filter and browse the list of decorations offered, add them to their cart, and purchase them.
 
 ---
